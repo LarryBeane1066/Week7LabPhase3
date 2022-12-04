@@ -4,6 +4,7 @@
 # Week7LabPhase3
 # write the line of code to import the datetime library (Hint: look at week 1 labs)
 
+from datetime import datetime
 def GetEmpName():
     empname = input("Enter employee name: ")
     return empname
@@ -48,9 +49,12 @@ def printinfo(DetailsPrinted):
             continue  # skip next if statement and re-start loop
     while True:
         # write the line of code to read a record from EmpFile and assign it to EmpDetail
-
+        EmpDetail = EmpFile.readline()
         if not EmpDetail:
             break
+        EmpDetail = EmpDetail.replace("\n", "") #remove carriage return from end of line
+        EmpList = EmpDetail.split("|")|
+            
         #write the line of code to remove the carriage return from the end of the record read from the file
 
         #write the line of code to split the record read in on the pipe delimiter and assign it to EmpList
